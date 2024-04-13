@@ -1,0 +1,100 @@
+/* submit-page.css */
+
+/* Style for navigation bar background color */
+html {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+html::-webkit-scrollbar{ 
+    display: none;  /* Safari and Chrome */
+}
+
+.body{
+    background-image: url('static/images/Premium Photo _ Online shopping icon on smart phone for global concept.jpg');
+    background-color: #f5f5f5
+}
+
+.navbar {
+    background-color: #27277e; /* Replace with your preferred shade of blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_for_title {
+    display: flex;
+    justify-content: center; /* Horizontally center the child elements */
+    align-items: center; /* Vertically center the child elements */
+    height: 50px;
+
+}
+.container_for_options {
+    display: flex;
+    justify-content: space-around; /* Horizontally center the child elements */
+    align-items: center; /* Vertically center the child elements */
+    height: 100px;
+}
+.selection button{
+    margin: 0 30px; 
+}
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 3px #c0c0c0;
+}
+
+.button:hover {
+    background-color: #3e8e41;
+}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #b7b7b7;
+    transform: translateY(4px);
+}
+
+.button.all {
+    background-color: #f8b946; /* Orange for 'All' */
+}
+
+.button.positive {
+    background-color: #3eecad; /* Green for 'Positive' */
+}
+
+.button.negative {
+    background-color: #f94b4b; /* Red for 'Negative' */
+}
+
+.button.neutral {
+    background-color: #5190c4; /* Blue for 'Neutral' */
+}
+
+.list {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0;
+}
+
+.list li {
+    display: inline-block; /* Display list items side by side */
+    margin-right: 10px; /* Add some space between list items */
+}
+
+
+.container_for_graph {
+    display: flex;
+    justify-content: center; /* Horizontally center the child elements */
+    align-items: center; /* Vertically center the child elements */
+    height: 100vh; /* Set the container height to the full viewport height */
+}
+
+.graphs {
+    width: 700px;
+    height: 400px;
+}
+/* Additional styles for the page if needed */

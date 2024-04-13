@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/submit-page.css') }}" rel="stylesheet">
+
+    <!-- ... other CSS files ... -->
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        
+    </style>
+</head>
+
+<body class="body">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="static\images\classer_crop.png" width=220px height=60px>            
+            </a>
+        </div>
+    </nav>
+    <br>
+    <div class="container_for_title">
+        <div class="title">
+            <h1>{{ Name }}</h1>
+        </div>
+    </div>
+    <br>
+    <div class="container_for_options">
+        <div class="selection">
+            <button class="button all" onclick="filterReviews('All')">All</button>
+            <button class="button positive" onclick="filterReviews('Positive')">Positive</button>
+            <button class="button negative" onclick="filterReviews('Negative')">Negative</button>
+            <button class="button neutral" onclick="filterReviews('Neutral')">Neutral</button>
+    </div>
+        </div>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Stars</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>label</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in csv_data.iterrows() %}
+                <tr class="review-row" data-sentiment="{{ row['Sentiment'] }}">
+                    <td>{{ row['Stars'] }}</td>
+                    <td>{{ row['Title'] }}</td>
+                    <td>{{ row['Description'] }}</td>
+                    <td>{{ row['label'] }}</td>
+                    <td>{{ row['Sentiment'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <ul class="list">
+            <li>OR - Original</li>
+            <li>CG - Computer Generated</li>
+        </ul>
+    </div>
+
+    <!-- Graphs Container -->
+    <div class="container_for_graph">
+        <div class="graphs">
+            <h2>Graphs</h2>
+            <canvas id="sentimentChart" width="500" height="300"></canvas>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}?v=1.0">
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

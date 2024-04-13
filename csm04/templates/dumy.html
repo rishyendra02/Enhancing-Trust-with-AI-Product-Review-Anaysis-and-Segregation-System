@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+    <!-- CSS FILES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/submit-page.css') }}" rel="stylesheet">
+
+    <!-- ... other CSS files ... -->
+</head>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 8px;
+    }
+    
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="static\images\classer_crop.png" width=220px height=60px>            
+            </a>
+        </div>
+    </nav>
+    <p>{{ Name }}</p>
+    <br>
+    <div class="selection">
+        <button onclick="filterReviews('All')">All</button>
+        <button onclick="filterReviews('Positive')">Positive</button>
+        <button onclick="filterReviews('Negative')">Negative</button>
+        <button onclick="filterReviews('Neutral')">Neutral</button>
+    </div>
+    <div class="table">
+        <h2>CSV Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stars</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>label</th>
+                    <th>Sentiment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in csv_data.iterrows() %}
+                <tr class="review-row" data-sentiment="{{ row['Sentiment'] }}">
+                    <td>{{ row['Stars'] }}</td>
+                    <td>{{ row['Title'] }}</td>
+                    <td>{{ row['Description'] }}</td>
+                    <td>{{ row['label'] }}</td>
+                    <td>{{ row['Sentiment'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="graphs">
+            <p>graphs</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}?v=1.0">
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/click-scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
