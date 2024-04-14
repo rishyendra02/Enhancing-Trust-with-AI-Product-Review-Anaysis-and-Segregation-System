@@ -68,11 +68,16 @@ pip install nltk
 ```bash
 pip install scikit-learn
 ```
+```bash
+pip install spacy
+```
 
 * Run the application
 ```bash
 python app.py
 ```
+
+
 ## Screenshots
 
 ![Website Screenshot](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/res%201.png)
