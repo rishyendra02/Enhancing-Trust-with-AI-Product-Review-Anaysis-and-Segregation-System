@@ -117,5 +117,6 @@ python app.py
 - [@Rishyendra kumar](https://github.com/rishyendra02)
 - [@Tarakesh](https://github.com/18253ee102)
 - [@Rohith](https://github.com/rohithgr30)
+- [@Anurag](https://github.com/ThalariAnurag)
 
 
