@@ -90,7 +90,10 @@ python app.py
     * Paste the product review link into the search bar on the website.
     * Analyze reviews by applying filters and viewing pie charts to gain insights into sentiment and aspects mentioned in the reviews.
 
+## Video Demonstration
+* Click here to get the detailed walkthrough of our project
 
+  [Video presentation](https://drive.google.com/file/d/1bqkwp1tjH1Hr0imA9rSKAa9LgcKYdP_S/view?usp=drive_link)
 
 
 ## Screenshots
