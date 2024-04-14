@@ -72,10 +72,25 @@ pip install scikit-learn
 pip install spacy
 ```
 
-* Run the application
+## Usage
+
+* **Training the SVM Model:** Run the fake.py script to train the SVM model. Make sure to save the trained model with a .joblib extension.
+```bash
+python fake.py
+```
+
+* **Running the Web Application:** Start the Flask server by running app.py to get the Flask link.
 ```bash
 python app.py
 ```
+
+* **Accessing the Website:** Click on the produced link to redirect to the website.
+
+* **Analyzing Reviews:**
+    * Paste the product review link into the search bar on the website.
+    * Analyze reviews by applying filters and viewing pie charts to gain insights into sentiment and aspects mentioned in the reviews.
+
+
 
 
 ## Screenshots
