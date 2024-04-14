@@ -75,7 +75,10 @@ python app.py
 ```
 ## Screenshots
 
-![Website Screenshot](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/res%201.png)
+[Website Screenshot](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/res%201.png)
+[Wesite Screenshot](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/res%202.png)
+[Wesite Screenshot](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/res%202.1.png)
+
 ## Documentation
 
 [Documentation](https://github.com/rishyendra02/Enhancing-Trust-with-AI-Product-Review-Anaysis-and-Segregation-System/blob/main/Team%2004%20Documentation%20Final%20NEW.pdf)
